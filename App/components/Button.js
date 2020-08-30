@@ -13,7 +13,7 @@ const styles = StyleSheet.create({
     color: "#060606"
   },
   button: {
-    backgroundColor: "#333333",
+    backgroundColor: "#373b4f",
     flex: 1,
     height: Math.floor(buttonWidth - 10),
     alignItems: "center",
@@ -28,10 +28,10 @@ const styles = StyleSheet.create({
     paddingLeft: 40
   },
   buttonSecondary: {
-    backgroundColor: "#a6a6a6"
+    backgroundColor: "#e1ebed"
   },
   buttonAccent: {
-    backgroundColor: "#f09a36"
+    backgroundColor: "#9c6254"
   }
 });
 
