@@ -20,7 +20,15 @@ export default class History extends React.Component {
     return (
       <View style={styles.container}>
         <StatusBar barStyle="light-content" />
-        <SafeAreaView>{/* add history contents here */}</SafeAreaView>
+        <SafeAreaView>
+          <Text style={styles.value}>
+            {`
+                This is mock data from local 
+                3 X 100 = 300
+                5 X 200 = 1000
+            `}
+          </Text>
+        </SafeAreaView>
       </View>
     );
   }
