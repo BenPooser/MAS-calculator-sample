@@ -1,6 +1,6 @@
 import React from "react";
 import { StyleSheet, Text, View, StatusBar, SafeAreaView } from "react-native";
-import {} from "react-navigation";
+// import {} from "react-navigation";
 
 import Row from "./Row";
 import Button from "./Button";
@@ -39,8 +39,8 @@ export default class Calculator extends React.Component {
           <Row>
             <Button
               text="History"
-              theme="secondary"
-              onPress={() => this.handleTap("history")}
+              theme="special"
+              onPress={() => this.props.navigation.navigate("History")}
             />
             <Button
               text="C"

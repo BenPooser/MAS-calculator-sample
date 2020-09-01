@@ -7,10 +7,10 @@ const buttonWidth = screen.width / 4;
 const styles = StyleSheet.create({
   text: {
     color: "#fff",
-    fontSize: 25
+    fontSize: 25,
   },
   textSecondary: {
-    color: "#060606"
+    color: "#060606",
   },
   button: {
     backgroundColor: "#373b4f",
@@ -19,20 +19,24 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     borderRadius: Math.floor(buttonWidth),
-    margin: 5
+    margin: 5,
   },
   buttonDouble: {
     width: screen.width / 2 - 10,
     flex: 0,
     alignItems: "flex-start",
-    paddingLeft: 40
+    paddingLeft: 40,
   },
   buttonSecondary: {
-    backgroundColor: "#e1ebed"
+    backgroundColor: "#e1ebed",
+  },
+  buttonSpecial: {
+    backgroundColor: "#e1ebed",
+    borderRadius: 10,
   },
   buttonAccent: {
-    backgroundColor: "#9c6254"
-  }
+    backgroundColor: "#9c6254",
+  },
 });
 
 export default ({ onPress, text, size, theme }) => {
@@ -45,6 +49,9 @@ export default ({ onPress, text, size, theme }) => {
 
   if (theme === "secondary") {
     buttonStyles.push(styles.buttonSecondary);
+    textStyles.push(styles.textSecondary);
+  } else if (theme === "special") {
+    buttonStyles.push(styles.buttonSpecial);
     textStyles.push(styles.textSecondary);
   } else if (theme === "accent") {
     buttonStyles.push(styles.buttonAccent);
