@@ -1,5 +1,12 @@
 import React from "react";
-import { StyleSheet, Text, View, StatusBar, SafeAreaView } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  View,
+  StatusBar,
+  SafeAreaView,
+  ClippingRectangle,
+} from "react-native";
 // import {} from "react-navigation";
 
 import Row from "./Row";

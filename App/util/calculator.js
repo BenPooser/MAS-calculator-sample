@@ -1,3 +1,5 @@
+import { db } from "./config";
+
 export const initialState = {
   currentValue: "0",
   operator: null,
@@ -25,6 +27,8 @@ export const handleEqual = (state) => {
   };
 
   if (operator === "/") {
+    const record = previous / current;
+    addNewRecord(record);
     return {
       currentValue: previous / current,
       ...resetState,
@@ -32,6 +36,8 @@ export const handleEqual = (state) => {
   }
 
   if (operator === "*") {
+    const record = previous / current;
+    addNewRecord(record);
     return {
       currentValue: previous * current,
       ...resetState,
@@ -39,6 +45,8 @@ export const handleEqual = (state) => {
   }
 
   if (operator === "+") {
+    const record = previous / current;
+    addNewRecord(record);
     return {
       currentValue: previous + current,
       ...resetState,
@@ -46,12 +54,13 @@ export const handleEqual = (state) => {
   }
 
   if (operator === "-") {
+    const record = previous / current;
+    addNewRecord(record);
     return {
       currentValue: previous - current,
       ...resetState,
     };
   }
-
   return state;
 };
 
@@ -82,6 +91,10 @@ const calculator = (type, value, state) => {
     default:
       return state;
   }
+};
+
+const addNewRecord = (record) => {
+  db.ref("/records").push(record);
 };
 
 export default calculator;
