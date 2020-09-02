@@ -30,34 +30,34 @@ export const handleEqual = (state) => {
     const record = previous / current;
     addNewRecord(record);
     return {
-      currentValue: previous / current,
+      currentValue: record,
       ...resetState,
     };
   }
 
   if (operator === "*") {
-    const record = previous / current;
+    const record = previous * current;
     addNewRecord(record);
     return {
-      currentValue: previous * current,
+      currentValue: record,
       ...resetState,
     };
   }
 
   if (operator === "+") {
-    const record = previous / current;
+    const record = previous + current;
     addNewRecord(record);
     return {
-      currentValue: previous + current,
+      currentValue: record,
       ...resetState,
     };
   }
 
   if (operator === "-") {
-    const record = previous / current;
+    const record = previous - current;
     addNewRecord(record);
     return {
-      currentValue: previous - current,
+      currentValue: record,
       ...resetState,
     };
   }
