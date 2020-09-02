@@ -22,7 +22,12 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.gatech.mas-calculator"
+    },
+    "sdkVersion": "38.0.0",
+    "android": {
+      "package": "com.mas"
     }
   }
 }
