@@ -1,5 +1,7 @@
 ## React Native Calculator App
 
+Source Code from https://github.com/ReactNativeSchool/react-native-calculator
+
 ![Demo](./assets/demo.png)
 
 ### Installation
